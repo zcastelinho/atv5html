@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nassau Express | Calculadora de Frete</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            NASSAU<span>EXPRESS</span>
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#calcular">Calcular frete</a>
+            <a href="#como-funciona">Como funciona</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-text">
+
+                <p class="tag">ENTREGA RÁPIDA E INTELIGENTE</p>
+
+                <h1>
+                    Calcule seu
+                    <span>frete.</span>
+                </h1>
+
+                <p class="descricao">
+                    Informe seu CEP e descubra a distância até a
+                    UNINASSAU e o valor estimado da entrega.
+                </p>
+
+                <a href="#calcular" class="botao">
+                    CALCULAR AGORA
+                </a>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="icone-entrega">
+                    🛵
+                </div>
+
+                <div>
+                    <p>PARTIDA</p>
+                    <h2>UNINASSAU</h2>
+                    <span>Fortaleza • Aguanambi</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CALCULADORA -->
+
+        <section id="calcular" class="calculadora">
+
+            <div class="titulo-secao">
+
+                <p class="tag">
+                    CALCULADORA DE FRETE
+                </p>
+
+                <h2>
+                    Onde você<br>
+                    <span>quer receber?</span>
+                </h2>
+
+            </div>
+
+
+            <div class="calculator-box">
+
+                <form id="formFrete">
+
+                    <label for="cep">
+                        Digite seu CEP
+                    </label>
+
+                    <div class="input-area">
+
+                        <input
+                            type="text"
+                            id="cep"
+                            maxlength="9"
+                            placeholder="00000-000"
+                            required
+                        >
+
+                        <button type="submit">
+                            CALCULAR
+                        </button>
+
+                    </div>
+
+                    <p class="ajuda">
+                        Exemplo: 60000-000
+                    </p>
+
+                </form>
+
+
+                <!-- LOADING -->
+
+                <div id="loading" class="loading">
+                    Consultando CEP...
+                </div>
+
+
+                <!-- ERRO -->
+
+                <div id="erro" class="erro"></div>
+
+
+                <!-- RESULTADO -->
+
+                <div id="resultado" class="resultado">
+
+                    <div class="endereco">
+
+                        <p class="mini-title">
+                            DESTINO
+                        </p>
+
+                        <h3 id="enderecoTexto">
+                            -
+                        </h3>
+
+                        <span id="cidadeTexto">
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="resultados-grid">
+
+                        <div class="resultado-item">
+
+                            <span>
+                                DISTÂNCIA
+                            </span>
+
+                            <strong id="distancia">
+                                0 km
+                            </strong>
+
+                        </div>
+
+
+                        <div class="resultado-item">
+
+                            <span>
+                                VALOR POR KM
+                            </span>
+
+                            <strong id="valorKm">
+                                R$ 1,50
+                            </strong>
+
+                        </div>
+
+
+                        <div class="resultado-item destaque">
+
+                            <span>
+                                FRETE ESTIMADO
+                            </span>
+
+                            <strong id="frete">
+                                R$ 0,00
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="aviso">
+
+                        <strong>Estimativa acadêmica</strong>
+
+                        <p>
+                            O valor é calculado usando uma tarifa
+                            configurada para o projeto e não representa
+                            uma cotação oficial da Uber.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMO FUNCIONA -->
+
+        <section id="como-funciona" class="como-funciona">
+
+            <div>
+
+                <p class="tag">
+                    COMO FUNCIONA
+                </p>
+
+                <h2>
+                    Três passos.<br>
+                    <span>Um resultado.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="passos">
+
+                <article>
+
+                    <span>01</span>
+
+                    <h3>
+                        Digite o CEP
+                    </h3>
+
+                    <p>
+                        Informe o CEP do local onde deseja
+                        receber sua entrega.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>02</span>
+
+                    <h3>
+                        Consulte o endereço
+                    </h3>
+
+                    <p>
+                        A API consulta o CEP e retorna o
+                        endereço e as coordenadas do destino.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>03</span>
+
+                    <h3>
+                        Veja o frete
+                    </h3>
+
+                    <p>
+                        A distância é calculada e usada
+                        para estimar o preço da entrega.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="logo">
+            NASSAU<span>EXPRESS</span>
+        </div>
+
+        <p>
+            Projeto acadêmico • 2026
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
